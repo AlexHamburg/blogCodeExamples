@@ -1,8 +1,7 @@
 stages:
   - validate
   - upload-resources-to-s3
-  - plan
-  - apply
+  - plan-and-apply
 
 validate:
   stage: validate
@@ -41,8 +40,8 @@ upload-resources-to-s3:
   tags:
     - docker_executor
 
-plan:
-  stage: plan
+plan-and-apply:
+  stage: plan-and-apply
   image:
     name: hashicorp/terraform:light
     entrypoint:
