@@ -26,8 +26,6 @@ module "canary" {
 
   canary_runtime = "syn-nodejs-puppeteer-3.6"
   canary_source  = "canary.js"
-
-  # Mandatory Tags for Rackspace Platform
   tags = {
     Application = "Canary"
     UseCase     = "Case1"
